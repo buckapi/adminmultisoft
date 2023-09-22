@@ -12,7 +12,6 @@ import Swal from 'sweetalert2'
 
 import {CATEGORIES} from '@app/services/categories.service';
 import { Router } from '@angular/router';
-import { ExistenciaService } from '@app/services/existencia-service.service';
 import { AuthRESTService } from './services/authREST.service';
 
 declare const XM_Popup: any;
@@ -23,8 +22,7 @@ declare const XM_Popup: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit {
-  existencias: any[] = []; 
-  existenciasSize:number=0;
+ 
   @ViewChild('deleteSwal')
   categories: any;
   // public readonly deleteSwal!: SwalComponent;
@@ -140,7 +138,7 @@ public getProducts(){
   title = 'vk';
   adapter = new  DemoFilePickerAdapter(this.http,this._butler);
   constructor(
-    public existenciaService:ExistenciaService,
+    
     private http: HttpClient,
  public router:Router,
    // private formBuilder: FormBuilder,
@@ -189,23 +187,8 @@ this.script.load(
       prevEl: '.swiper-button-prev'
     },
   };  
-  obtenerExistencias() {
-    const familia = "%5Bobject+Object%5D";
-
-    this.existenciaService.getAllExistencias(familia).subscribe(
-      (data) => {
-        this.existencias = data;
-        this.yeoman.existencias=null;
-        this.yeoman.existencias=this.existencias;
-        this.yeoman.existenciasSize=this.existencias.length;
-        // Aquí puedes hacer algo con los datos obtenidos, como mostrarlos en el template.
-      },
-      (error) => {
-        // console.error('Error al obtener existencias:', error);
-      }
-    );
-  }
+  
   ngAfterViewInit(): void {
-    this.obtenerExistencias();
+   
   }
 }

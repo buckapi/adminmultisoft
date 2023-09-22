@@ -5,7 +5,6 @@ import { ScriptStore } from '@app/services/script.store';
 import { Yeoman } from '@app/services/yeoman.service';
 import { Router } from '@angular/router';
 import { AuthRESTService } from '@app/services/authREST.service';
-import { ExistenciaService } from '@app/services/existencia-service.service';
 import { DataApiService } from '@app/services/data-api.service';
 
 declare const XM_Popup: any;
@@ -22,7 +21,7 @@ export class HomeComponent implements OnInit {
   allSize:number=0;
 
 
-  constructor( public existenciaService:ExistenciaService,
+  constructor( 
    
  public router:Router,
  public authRESTService:AuthRESTService,
@@ -39,7 +38,7 @@ export class HomeComponent implements OnInit {
       this.yeoman.allCategoriesSize=this.yeoman.allcategory.length;
 
     });
-    this.obtenerExistencias();
+    
     if(!this.authRESTService.getCurrentUser() ){this.router.navigate(['/login'])}
      this.script.load(
   
@@ -72,22 +71,7 @@ export class HomeComponent implements OnInit {
       prevEl: '.swiper-button-prev'
     },
   };  
-  obtenerExistencias() {
-    const familia = "%5Bobject+Object%5D";
 
-    this.existenciaService.getAllExistencias(familia).subscribe(
-      (data) => {
-        this.existencias = data;
-        this.yeoman.existencias=null;
-        this.yeoman.existencias=this.existencias;
-        this.yeoman.existenciasSize=this.existencias.length;
-        // Aquí puedes hacer algo con los datos obtenidos, como mostrarlos en el template.
-      },
-      (error) => {
-        // console.error('Error al obtener existencias:', error);
-      }
-    );
-  }
   ngOnInit(): void {
   }
 

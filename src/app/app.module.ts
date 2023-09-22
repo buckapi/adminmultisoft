@@ -26,7 +26,6 @@ import { TrimLastDirective } from './trim-last.directive';
 import { UiModule } from './components/ui/ui.module';
 import { HomeModule } from './components/home/home.module';
 import { Router,RouterModule } from '@angular/router';
-import { ExistenciaService } from './services/existencia-service.service';
 import { Yeoman } from './services/yeoman.service';
 
 @NgModule({
@@ -61,7 +60,7 @@ import { Yeoman } from './services/yeoman.service';
     HomeModule,
     RouterModule
   ],
-  providers: [FilePickerModule,ExistenciaService,Yeoman],
+  providers: [FilePickerModule,Yeoman],
   exports:[FilePickerModule],
   bootstrap: [AppComponent]
 })

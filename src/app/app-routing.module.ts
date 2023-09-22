@@ -7,7 +7,6 @@ const routes: Routes = [
   
   { path: 'login', loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule) },
   
-  { path: 'externalData', loadChildren: () => import('./components/externalData/external-data.module').then(m => m.ExternalDataModule) },
   
   { path: 'c2oDetail', loadChildren: () => import('./components/click2order/detail/detail.module').then(m => m.DetailModule) },
   
