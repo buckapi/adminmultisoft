@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
   templateUrl: './addtest.component.html',
   styleUrls: ['./addtest.component.css']
 })
-export class AddrubroComponent implements AfterViewInit {
+export class AddtestComponent implements AfterViewInit {
   @ViewChild('deleteSwal')
  
 
