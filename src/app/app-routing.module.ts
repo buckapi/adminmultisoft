@@ -19,6 +19,19 @@ const routes: Routes = [
   { path: 'cateall', loadChildren: () => import('./components/category/allcategory/allcategory.module').then(m => m.AllcategoryModule) },
 
   { path: 'catedetail', loadChildren: () => import('./components/category/detailcategory/detailcategory.module').then(m => m.DetailcategoryModule) },
+
+  { path: 'ruadd', loadChildren: () => import('./components/rubro/addrubro/addrubro.module').then(m => m.AddrubroModule) },
+
+  { path: 'ruall', loadChildren: () => import('./components/rubro/allrubro/allrubro.module').then(m => m.AllrubroModule) },
+
+  { path: 'rudetail', loadChildren: () => import('./components/rubro/detailrubro/detailrubro.module').then(m => m.DetailrubroModule) },
+
+   { path: 'testadd', loadChildren: () => import('./components/testimonios/addtest/addtest.module').then(m => m.AddtestModule) },
+
+  { path: 'testall', loadChildren: () => import('./components/testimonios/alltest/alltest.module').then(m => m.AlltestModule) },
+
+  { path: 'testdetail', loadChildren: () => import('./components/testimonios/detailtest/detailtest.module').then(m => m.DetailtestModule) },
+
 ];
 
 @NgModule({
