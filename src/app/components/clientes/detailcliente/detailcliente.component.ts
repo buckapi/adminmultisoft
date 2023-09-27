@@ -4,11 +4,11 @@ import { DataApiService } from '@app/services/data-api.service';
 import { Yeoman } from '@app/services/yeoman.service';
 import Swal from 'sweetalert2'
 @Component({
-  selector: 'app-detailrubro',
-  templateUrl: './detailrubro.component.html',
-  styleUrls: ['./detailrubro.component.css']
+  selector: 'app-detailcliente',
+  templateUrl: './detailcliente.component.html',
+  styleUrls: ['./detailcliente.component.css']
 })
-export class DetailrubroComponent implements OnInit {
+export class DetailclienteComponent implements OnInit {
 
   constructor
     (public yeoman:Yeoman,

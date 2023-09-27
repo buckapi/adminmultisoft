@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DetailrubroComponent } from './detailrubro.component';
+import { AddclienteComponent } from './addcliente.component';
 
-describe('DetailrubroComponent', () => {
-  let component: DetailrubroComponent;
-  let fixture: ComponentFixture<DetailrubroComponent>;
+describe('AddclienteComponent', () => {
+  let component: AddclienteComponent;
+  let fixture: ComponentFixture<AddclienteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DetailrubroComponent ]
+      declarations: [ AddclienteComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DetailrubroComponent);
+    fixture = TestBed.createComponent(AddclienteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

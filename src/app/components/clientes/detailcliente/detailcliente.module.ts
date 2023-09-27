@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DetailrubroRoutingModule } from './detailrubro-routing.module';
-import { DetailrubroComponent } from './detailrubro.component';
+import { DetailclienteRoutingModule } from './detailcliente-routing.module';
+import { DetailclienteComponent } from './detailcliente.component';
 
 
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
@@ -10,12 +10,12 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    DetailrubroComponent
+    DetailclienteComponent
   ],
   imports: [
     RouterModule,
     CommonModule,
-    DetailrubroRoutingModule, SweetAlert2Module.forRoot()
+    DetailclienteRoutingModule, SweetAlert2Module.forRoot()
   ]
 })
-export class DetailrubroModule { }
+export class DetailclienteModule { }

@@ -4,11 +4,11 @@ import { DataApiService } from '@app/services/data-api.service';
 import { Yeoman } from '@app/services/yeoman.service';
 import{NgxUiLoaderService} from 'ngx-ui-loader';
 @Component({
-  selector: 'app-allrubro',
-  templateUrl: './allrubro.component.html',
-  styleUrls: ['./allrubro.component.css']
+  selector: 'app-allcliente',
+  templateUrl: './allcliente.component.html',
+  styleUrls: ['./allcliente.component.css']
 })
-export class AllrubroComponent implements OnInit {
+export class AllclienteComponent implements OnInit {
 category:any;
 
   constructor(
@@ -29,7 +29,7 @@ getAll(){
 
 setPreview(i:any){
   this.yeoman.preview=this.yeoman.allcategory[i];
-  this.router.navigate(['rudetail']);
+  this.router.navigate(['clientdetail']);
 }
   ngOnInit(): void {
   }

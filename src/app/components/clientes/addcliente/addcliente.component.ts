@@ -11,15 +11,15 @@ import { DataApiService } from '@app/services/data-api.service';
 import Swal from 'sweetalert2'
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-addrubro',
-  templateUrl: './addrubro.component.html',
-  styleUrls: ['./addrubro.component.css']
+  selector: 'app-addcliente',
+  templateUrl: './addcliente.component.html',
+  styleUrls: ['./addcliente.component.css']
 })
-export class AddrubroComponent implements AfterViewInit {
+export class AddclienteComponent implements AfterViewInit {
   @ViewChild('deleteSwal')
  
 
-  rubro:any;
+  cliente:any;
   // products$:any={};
   // public captions: UploaderCaptions = {
   //   dropzone: {
@@ -82,11 +82,11 @@ export class AddrubroComponent implements AfterViewInit {
           console.log(response);
           // this.getAll();
           this._butler.uploaderImages=[];
-          this.router.navigate(['ruall']);
+          this.router.navigate(['clientall']);
           Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'Rubro guardado',
+            title: 'cliente guardado',
             showConfirmButton: false,
             timer: 1500
           })

@@ -20,11 +20,11 @@ const routes: Routes = [
 
   { path: 'catedetail', loadChildren: () => import('./components/category/detailcategory/detailcategory.module').then(m => m.DetailcategoryModule) },
 
-  { path: 'ruadd', loadChildren: () => import('./components/rubro/addrubro/addrubro.module').then(m => m.AddrubroModule) },
+  { path: 'clientadd', loadChildren: () => import('./components/clientes/addcliente/addcliente.module').then(m => m.AddclienteModule) },
 
-  { path: 'ruall', loadChildren: () => import('./components/rubro/allrubro/allrubro.module').then(m => m.AllrubroModule) },
+  { path: 'clientall', loadChildren: () => import('./components/clientes/allcliente/allcliente.module').then(m => m.AllclienteModule) },
 
-  { path: 'rudetail', loadChildren: () => import('./components/rubro/detailrubro/detailrubro.module').then(m => m.DetailrubroModule) },
+  { path: 'clientdetail', loadChildren: () => import('./components/clientes/detailcliente/detailcliente.module').then(m => m.DetailclienteModule) },
 
    { path: 'testadd', loadChildren: () => import('./components/testimonios/addtest/addtest.module').then(m => m.AddtestModule) },
 

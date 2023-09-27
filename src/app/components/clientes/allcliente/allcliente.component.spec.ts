@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AllrubroComponent } from './allrubro.component';
+import { AllclienteComponent } from './allcliente.component';
 
-describe('AllrubroComponent', () => {
-  let component: AllrubroComponent;
-  let fixture: ComponentFixture<AllrubroComponent>;
+describe('AllclienteComponent', () => {
+  let component: AllclienteComponent;
+  let fixture: ComponentFixture<AllclienteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AllrubroComponent ]
+      declarations: [ AllclienteComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AllrubroComponent);
+    fixture = TestBed.createComponent(AllclienteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
