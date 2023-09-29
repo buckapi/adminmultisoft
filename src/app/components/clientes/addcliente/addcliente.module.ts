@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AddrubroRoutingModule } from './addrubro-routing.module';
-import { AddrubroComponent } from './addrubro.component';
+import { AddclienteRoutingModule } from './addcliente-routing.module';
+import { AddclienteComponent } from './addcliente.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
@@ -10,13 +10,13 @@ import { FilePickerModule } from  'ngx-awesome-uploader';
 
 @NgModule({
   declarations: [
-    AddrubroComponent
+    AddclienteComponent
   ],
   imports: [
     FilePickerModule,
     HttpClientModule,
      CommonModule,
-    AddrubroRoutingModule,FormsModule
+    AddclienteRoutingModule,FormsModule
   ],exports:[FilePickerModule]
 })
-export class AddrubroModule { }
+export class AddclienteModule { }

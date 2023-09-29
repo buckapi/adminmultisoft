@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AllrubroRoutingModule } from './allrubro-routing.module';
-import { AllrubroComponent } from './allrubro.component';
+import { AllclienteRoutingModule } from './allcliente-routing.module';
+import { AllclienteComponent } from './allcliente.component';
 import { NgxUiLoaderModule } from "ngx-ui-loader";
 
 @NgModule({
   declarations: [
-    AllrubroComponent
+    AllclienteComponent
   ],
   imports: [
     CommonModule,
     NgxUiLoaderModule,
-    AllrubroRoutingModule
+    AllclienteRoutingModule
   ]
 })
-export class AllrubroModule { }
+export class AllclienteModule { }
