@@ -77,6 +77,13 @@ export class DataApiService {
 		.delete<PartInterface>(url_api, {headers: this.headers})
 		.pipe(map(data => data));
 	}
+	deleteClient(id: string){
+		const token = this.AuthRESTService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/client/${id}/?access_token$={token}`;
+		return this.http
+		.delete<PartInterface>(url_api, {headers: this.headers})
+		.pipe(map(data => data));
+	}
 	deleteCar(id: string){
 		const token = this.AuthRESTService.getToken();
 		const url_api=	this.yeoman.origin.restUrl+`/api/cars/${id}/?access_token$={token}`;
@@ -116,6 +123,10 @@ export class DataApiService {
 	}
 	getAllCategory(){
 		const url_api = 	this.yeoman.origin.restUrl+'/api/categories';
+		return this.http.get(url_api);
+	}
+	getAllClient(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/client';
 		return this.http.get(url_api);
 	}
 	getAllCars(){
@@ -245,6 +256,12 @@ export class DataApiService {
 		const url_api=	this.yeoman.origin.restUrl+'/api/categories';
 		return this.http
 		.post<CategoryInterface>(url_api, category)
+		.pipe(map(data => data));
+	}
+	saveClient(client :CategoryInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/client';
+		return this.http
+		.post<CategoryInterface>(url_api, client)
 		.pipe(map(data => data));
 	}
 	saveCar(car :CarInterface){
