@@ -20,7 +20,7 @@ export class AddcategoryComponent implements AfterViewInit {
  
 
   category:any;
-  products$:any={};
+  // products$:any={};
   public captions: UploaderCaptions = {
     dropzone: {
       title: 'Imágenes del producto',
