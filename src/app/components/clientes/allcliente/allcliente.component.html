@@ -13,7 +13,7 @@
                 <div class="page-titles">
 					<ol class="breadcrumb">
 						
-						<li class="breadcrumb-item active"><a href="javascript:void(0)">Cliente</a></li>
+						<li class="breadcrumb-item active"><a href="javascript:void(0)">Clientes</a></li>
                         <a routerLink="../clientadd" class="btn btn-primary light btn-md ml-auto"><i class="fa fa-plus scale5 mr-3"></i>Agregar Cliente</a>
                          
                     </ol>
@@ -25,7 +25,11 @@
                         <div class="card" >
                             <div class="card-body">
                                 <div class="new-arrival-product">
-                                    
+                                    <div class="new-arrivals-img-contnent">
+                                        <img class="img-fluid" src="assets/gymove/images/product/1.jpg" alt="" *ngIf="category.images[0]===undefined">
+                                        <img class="img-fluid" src="{{category.images[0]}}" alt="" *ngIf="category.images[0]!==undefined">
+                                  
+                                    </div>
                                     <div class="new-arrival-content text-center mt-3">
                                         <h4><a >{{category.name}}</a></h4>
                                       

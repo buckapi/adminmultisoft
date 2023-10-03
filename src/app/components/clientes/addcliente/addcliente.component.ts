@@ -19,23 +19,23 @@ export class AddclienteComponent implements AfterViewInit {
   @ViewChild('deleteSwal')
  
 
-  cliente:any;
+  cliente$:any={};
   // products$:any={};
-  // public captions: UploaderCaptions = {
-  //   dropzone: {
-  //     title: 'Imágenes del producto',
-  //     or: '.',
-  //     browse: 'Cargar',
-  //   },
-  //   cropper: {
-  //     crop: 'Cortar',
-  //     cancel: 'Cancelar',
-  //   },
-  //   previewCard: {
-  //     remove: 'Borrar',
-  //     uploadError: 'error',
-  //   },
-  // };
+  public captions: UploaderCaptions = {
+    dropzone: {
+      title: 'Imágenes del producto',
+      or: '.',
+      browse: 'Cargar',
+    },
+    cropper: {
+      crop: 'Cortar',
+      cancel: 'Cancelar',
+    },
+    previewCard: {
+      remove: 'Borrar',
+      uploadError: 'error',
+    },
+  };
   data = {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
     name: '',
