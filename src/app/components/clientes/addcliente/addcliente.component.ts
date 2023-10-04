@@ -19,7 +19,7 @@ export class AddclienteComponent implements AfterViewInit {
   @ViewChild('deleteSwal')
  
 
-  cliente$:any={};
+  client$:any={};
   // products$:any={};
   public captions: UploaderCaptions = {
     dropzone: {
@@ -78,7 +78,7 @@ export class AddclienteComponent implements AfterViewInit {
       onSubmit() {
         this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
         this.data.images=this._butler.uploaderImages;
-        this.dataApiService.saveCategory(this.data).subscribe(response=>{
+        this.dataApiService.saveClient(this.data).subscribe(response=>{
           console.log(response);
           // this.getAll();
           this._butler.uploaderImages=[];
