@@ -28,6 +28,7 @@
                                     </div>
                                   </div>
                                 <div class="col-md-6">
+                                
                                 <div class="">
                                     <div class="">
                                     <div class="form-group">
@@ -36,6 +37,20 @@
                                     </div>
                                     </div>
                                 </div>
+                                <div class="">
+                                    <div class="">
+                                    <div class="form-group">
+                                        <label for="event-description">Categoría</label>
+                                        
+                                        <select id="category" class="form-control wide my-custom-select" [(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
+                                            <option *ngFor="let category of yeoman.allcategory, let i = index " [ngValue]="i"> 
+                                                <span   style="cursor:pointer;">{{category.name}}</span>
+                                            </option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                </div>
+
                                 </div>
                             </div>
                             <div class="popup-box-actions medium void">

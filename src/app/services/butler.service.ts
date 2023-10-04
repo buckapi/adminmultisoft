@@ -21,6 +21,7 @@ export class Butler {
     myCars$:any={};
     cards$:any={};
     products$:any={};
+    clients$:any={};
     cars$:any={};
     currency:number=1;
     myPartsSize:number=0;

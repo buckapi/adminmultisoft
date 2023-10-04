@@ -19,6 +19,8 @@ export class Yeoman {
     categories:any=[];
     category:any={};
     allcategory:any=[];
+    clients:any=[];
+    allclient:any=[];
     // products:any[]=[];
     currency:number=1;
     config: {

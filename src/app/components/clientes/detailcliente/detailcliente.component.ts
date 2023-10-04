@@ -16,15 +16,15 @@ export class DetailclienteComponent implements OnInit {
     public dataApiService:DataApiService
     ) 
     { 
-      //  if(this.yeoman.preview.images[0]===undefined){this.router.navigate([''])}
+       if(this.yeoman.preview.images[0]===undefined){this.router.navigate([''])}
     }
 delete(){ 
-  this.dataApiService.deleteCategory(this.yeoman.preview.id).subscribe(response=>{
-    this.dataApiService.getAllCategory().subscribe(response=>{
-      this.yeoman.allcategory=response;
+  this.dataApiService.deleteClient(this.yeoman.preview.id).subscribe(response=>{
+    this.dataApiService.getAllClient().subscribe(response=>{
+      this.yeoman.allclient=response;
     });
   });
-  this.router.navigate(['/ruall']);
+  this.router.navigate(['/clientall']);
 }
 cancelDelete(){}
   ngOnInit(): void {

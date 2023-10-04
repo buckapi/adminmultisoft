@@ -21,14 +21,14 @@ category:any;
   }
 getAll(){
   this.ngxService.start("loader-01");
-  this.dataApiService.getAllCategory().subscribe(response=>{
-    this.yeoman.allcategory=response;
+  this.dataApiService.getAllClient().subscribe(response=>{
+    this.yeoman.allclient=response;
     this.ngxService.stop("loader-01");
   });
 }
 
 setPreview(i:any){
-  this.yeoman.preview=this.yeoman.allcategory[i];
+  this.yeoman.preview=this.yeoman.allclient[i];
   this.router.navigate(['clientdetail']);
 }
   ngOnInit(): void {

@@ -29,6 +29,9 @@ export interface SerialInterface {
 export interface CategoryInterface {
 
 }
+export interface ClientInterface {
+
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -45,6 +48,7 @@ export class DataApiService {
 	cierre:any;
 	serial:any;
 	transactions:any;
+	clients:any;
   	constructor(
 	  	public butler:Butler, 
 		public yeoman: Yeoman,
@@ -183,6 +187,13 @@ export class DataApiService {
 		.put<PartInterface>(url_api, part)
 		.pipe(map(data => data));
 	}
+	clientUpdate(part :ClientInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/client/${id}`;
+		return this.http
+		.put<PartInterface>(url_api, part)
+		.pipe(map(data => data));
+	}
 	cardUpdate(card :CardInterface, id: string){
 		// let token = this.authService.getToken();
 		const url_api=	this.yeoman.origin.restUrl+`/api/cards/${id}`;
@@ -258,10 +269,10 @@ export class DataApiService {
 		.post<CategoryInterface>(url_api, category)
 		.pipe(map(data => data));
 	}
-	saveClient(client :CategoryInterface){
+	saveClient(client :ClientInterface){
 		const url_api=	this.yeoman.origin.restUrl+'/api/client';
 		return this.http
-		.post<CategoryInterface>(url_api, client)
+		.post<ClientInterface>(url_api, client)
 		.pipe(map(data => data));
 	}
 	saveCar(car :CarInterface){
