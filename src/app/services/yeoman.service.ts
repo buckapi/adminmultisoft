@@ -22,7 +22,8 @@ export class Yeoman {
     allcategory:any=[];
     clients:any=[];
     allclient:any=[];
-    // products:any[]=[];
+    testimony:any=[];
+    alltestimony:any=[];
     currency:number=1;
     config: {
       clientSelected:number;

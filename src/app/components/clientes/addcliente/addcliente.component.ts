@@ -18,7 +18,6 @@ export class AddclienteComponent implements AfterViewInit {
   category='Seleccione una';
   categorySeted:boolean=false;
   clients$:any={};
-  products$:any={};
 
   public captions: UploaderCaptions = {
     dropzone: {

@@ -88,6 +88,13 @@ export class DataApiService {
 		.delete<ClientInterface>(url_api, {headers: this.headers})
 		.pipe(map(data => data));
 	}
+	deleteTestimony(id: string){
+		const token = this.AuthRESTService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/testimonials/${id}/?access_token$={token}`;
+		return this.http
+		.delete<ClientInterface>(url_api, {headers: this.headers})
+		.pipe(map(data => data));
+	}
 	deleteCar(id: string){
 		const token = this.AuthRESTService.getToken();
 		const url_api=	this.yeoman.origin.restUrl+`/api/cars/${id}/?access_token$={token}`;
@@ -131,6 +138,10 @@ export class DataApiService {
 	}
 	getAllClient(){
 		const url_api = 	this.yeoman.origin.restUrl+'/api/clients';
+		return this.http.get(url_api);
+	}
+	getAllTestimony(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/testimonials';
 		return this.http.get(url_api);
 	}
 	getAllCars(){
@@ -190,6 +201,13 @@ export class DataApiService {
 	clientUpdate(part :ClientInterface, id: string){
 		// let token = this.authService.getToken();
 		const url_api=	this.yeoman.origin.restUrl+`/api/clients/${id}`;
+		return this.http
+		.put<ClientInterface>(url_api, part)
+		.pipe(map(data => data));
+	}
+	testimonyUpdate(part :ClientInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/testimonials/${id}`;
 		return this.http
 		.put<ClientInterface>(url_api, part)
 		.pipe(map(data => data));
@@ -271,6 +289,12 @@ export class DataApiService {
 	}
 	saveClient(client :ClientInterface){
 		const url_api=	this.yeoman.origin.restUrl+'/api/clients';
+		return this.http
+		.post<ClientInterface>(url_api, client)
+		.pipe(map(data => data));
+	}
+	saveTestimony(client :ClientInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/testimonials';
 		return this.http
 		.post<ClientInterface>(url_api, client)
 		.pipe(map(data => data));

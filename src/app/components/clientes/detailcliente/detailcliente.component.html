@@ -49,40 +49,33 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-xl-3 col-lg-6  col-md-6 col-xxl-5 ">
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-xxl-5 client-presentation">
                                 <!-- Tab panes -->
                                 <div class="tab-content">
-                                    
                                     <div role="tabpanel" class="tab-pane fade show " [class.active]="i == 0" id="{{i}}" *ngFor="let image of yeoman.preview.images;let i =index;">
                                         <img class="img-fluid" src="assets/gymove/images/product/1.jpg" alt="" *ngIf="yeoman.preview.images[0]===undefined">
                                         <img class="img-fluid" src="{{image}}" alt="" *ngIf="image!==undefined">
-                                    </div> 
-                                    
-                                   
+                                    </div>
                                 </div>
                                 <div class="tab-slide-content new-arrival-product mb-4 mb-xl-0">
                                     <!-- Nav tabs -->
                                     <ul class="nav slide-item-list mt-3" role="tablist">
-                                       
                                     </ul>
                                 </div>
-                            </div>
-                            <!--Tab slider End-->
-                            <div class="col-xl-9 col-lg-6  col-md-6 col-xxl-7 col-sm-12">
-                                <div class="product-detail-content">
-                                    <!--Product details-->
+                        
+                                <!-- Detalles de texto centrados -->
+                                <div class="product-detail-content text-center">
+                                    <!-- Product details -->
                                     <div class="new-arrival-content pr">
-                                        <h4>Cliente: {{yeoman.preview.name}}</h4>
-                                       
+                                        <h4 class="client-name">Cliente: {{yeoman.preview.name}}</h4>
                                     </div>
                                     <div class="new-arrival-content pr">
-                                        <h4>Industria: {{category}}</h4>
-                                       
-                                       
+                                        <h4 class="client-industry">Industria: {{category}}</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>

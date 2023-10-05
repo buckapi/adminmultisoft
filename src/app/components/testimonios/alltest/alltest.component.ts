@@ -9,7 +9,8 @@ import{NgxUiLoaderService} from 'ngx-ui-loader';
   styleUrls: ['./alltest.component.css']
 })
 export class AlltestComponent implements OnInit {
-category:any;
+
+testimony:any;
 
   constructor(
     private ngxService: NgxUiLoaderService,
@@ -21,14 +22,14 @@ category:any;
   }
 getAll(){
   this.ngxService.start("loader-01");
-  this.dataApiService.getAllCategory().subscribe(response=>{
-    this.yeoman.allcategory=response;
+  this.dataApiService.getAllTestimony().subscribe(response=>{
+    this.yeoman.alltestimony=response;
     this.ngxService.stop("loader-01");
   });
 }
 
 setPreview(i:any){
-  this.yeoman.preview=this.yeoman.allcategory[i];
+  this.yeoman.preview=this.yeoman.alltestimony[i];
   this.router.navigate(['testdetail']);
 }
   ngOnInit(): void {

@@ -31,3 +31,17 @@
     border-color: #f94687;
     color: #F94687;
 }
+
+.client-presentation {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.client-name,
+.client-industry {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}

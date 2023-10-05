@@ -9,7 +9,7 @@ import Swal from 'sweetalert2'
   styleUrls: ['./detailtest.component.css']
 })
 export class DetailtestComponent implements OnInit {
-
+  testimony:any;
   constructor
     (public yeoman:Yeoman,
     public router:Router,
@@ -19,12 +19,12 @@ export class DetailtestComponent implements OnInit {
       //  if(this.yeoman.preview.images[0]===undefined){this.router.navigate([''])}
     }
 delete(){ 
-  this.dataApiService.deleteCategory(this.yeoman.preview.id).subscribe(response=>{
-    this.dataApiService.getAllCategory().subscribe(response=>{
-      this.yeoman.allcategory=response;
+  this.dataApiService.deleteTestimony(this.yeoman.preview.id).subscribe(response=>{
+    this.dataApiService.getAllTestimony().subscribe(response=>{
+      this.yeoman.alltestimony=response;
     });
   });
-  this.router.navigate(['/ruall']);
+  this.router.navigate(['/testall']);
 }
 cancelDelete(){}
   ngOnInit(): void {

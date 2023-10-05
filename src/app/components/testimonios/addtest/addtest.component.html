@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a routerLink="../cateall">Testimonios</a></li>
+                <li class="breadcrumb-item"><a routerLink="../testall">Testimonios</a></li>
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Agregar Testimonio</a></li>
             </ol>
         </div>
@@ -17,7 +17,18 @@
 
                         <form>
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-6">
+                                    <div class="">
+                                      <div class="">
+                                        <ngx-awesome-uploader
+                                        [adapter]="adapter"
+                                        [captions]="captions">
+                                        </ngx-awesome-uploader>
+                                      </div>
+                                    </div>
+                                  </div>
+                               
+                                <div class="col-md-6">
                                     <div class="">
                                         <div class="">
                                         <div class="form-group">
@@ -26,8 +37,14 @@
                                         </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-8">
+                                    <div class="">
+                                        <div class="">
+                                        <div class="form-group">
+                                            <label for="event-name">Empresa representante</label>
+                                            <input  class="form-control" placeholder="Empresa o compañia" type="text" [(ngModel)]="data.company" name="name" required  [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                        </div>
+                                    </div>
                                     <div class="">
                                         <div class="">
                                         <div class="form-group">
