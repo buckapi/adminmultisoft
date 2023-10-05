@@ -21,8 +21,8 @@ export class DetailclienteComponent implements OnInit {
       }
 
 delete(){ 
-  this.dataApiService.deleteProduct(this.yeoman.preview.id).subscribe(response=>{
-    this.dataApiService.getAllProducts().subscribe(response=>{
+  this.dataApiService.deleteClient(this.yeoman.preview.id).subscribe(response=>{
+    this.dataApiService.getAllClient().subscribe(response=>{
       
       this.yeoman.all=response;
     });

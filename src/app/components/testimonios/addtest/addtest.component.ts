@@ -18,24 +18,9 @@ import { Router } from '@angular/router';
 export class AddtestComponent implements AfterViewInit {
   @ViewChild('deleteSwal')
  
-
-  rubro:any;
-  // products$:any={};
-  // public captions: UploaderCaptions = {
-  //   dropzone: {
-  //     title: 'Imágenes del producto',
-  //     or: '.',
-  //     browse: 'Cargar',
-  //   },
-  //   cropper: {
-  //     crop: 'Cortar',
-  //     cancel: 'Cancelar',
-  //   },
-  //   previewCard: {
-  //     remove: 'Borrar',
-  //     uploadError: 'error',
-  //   },
-  // };
+  
+  test:any;
+ 
   data = {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
     name: '',
@@ -43,30 +28,10 @@ export class AddtestComponent implements AfterViewInit {
     price: null,
     stock: 0,
     ref: '',
-    idBranch: ''
+    idBranch: '',
+    detail: ''
   };
-  // branchOptions = [
-  //   {
-  //     name: 'Accesorios',
-  //     images: ['assets/assetsdash/images/profile/profile.png'],
-  //     idBranch: 'ca000001'
-  //   },
-  //   {
-  //     name: 'Herramientas',
-  //     images: ['assets/assetsdash/images/profile/profile.png'],
-  //     idBranch: 'ca000002'
-  //   },
-  //   {
-  //     name: 'Hogar',
-  //     images: ['assets/assetsdash/images/profile/profile.png'],
-  //     idBranch: 'ca000003'
-  //   },
-  //   {
-  //     name: 'Tecnología',
-  //     images: ['assets/assetsdash/images/profile/profile.png'],
-  //     idBranch: 'ca000004'
-  //   }
-  // ];
+ 
   adapter = new  DemoFilePickerAdapter(this.http,this._butler);
   constructor(
     public router:Router,
@@ -82,11 +47,11 @@ export class AddtestComponent implements AfterViewInit {
           console.log(response);
           // this.getAll();
           this._butler.uploaderImages=[];
-          this.router.navigate(['ruall']);
+          this.router.navigate(['testall']);
           Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'Rubro guardado',
+            title: 'Testimonio guardado',
             showConfirmButton: false,
             timer: 1500
           })

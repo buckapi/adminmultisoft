@@ -40,7 +40,7 @@
                                     <div class="">
                                     <div class="form-group">
                                         <label for="event-name">Nombre del producto/solución</label>
-                                        <input  class="form-control" placeholder="nombre"type="text" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}">
+                                        <input  class="form-control" placeholder="nombre" type="text" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}">
                                     </div>
                                     </div>
                                 </div>
@@ -66,26 +66,50 @@
                                         
                                     <div class="form-group">
                                         <label for="event-description">Descripción</label>
-                                        <textarea    [ngModelOptions]="{standalone: true}" [(ngModel)]="data.description"class="form-control" ></textarea>
+                                        <textarea    [ngModelOptions]="{standalone: true}" placeholder="Resumen" type="text" [(ngModel)]="data.description"class="form-control" ></textarea>
                                     </div>
                                     </div>
                                 </div>
-                                <div class="">
-                                    <div class="">
-                                        
-                                    <div class="form-group">
-                                        <label for="event-description">Modulo 1</label>
-                                        <textarea    [ngModelOptions]="{standalone: true}" [(ngModel)]="data.description1"class="form-control" ></textarea>
+                                <div class="row">    
+                                    <div class="col-lg-6">
+                                        <div class="">
+                                            
+                                        <div class="form-group">
+                                            <label for="event-description">Titulo del Modulo 1</label>
+                                            <textarea    [ngModelOptions]="{standalone: true}" placeholder="titulo del modulo" type="text" [(ngModel)]="data.title1"class="form-control" ></textarea>
+                                        </div>
+                                        </div>
                                     </div>
+                                    
+                                    <div class="col-lg-6">
+                                        <div class="">
+                                            
+                                        <div class="form-group">
+                                            <label for="event-description">Descripción Modulo 1</label>
+                                            <textarea    [ngModelOptions]="{standalone: true}" placeholder="Resumen" type="text" [(ngModel)]="data.description1"class="form-control" ></textarea>
+                                        </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="">
-                                    <div class="">
-                                        
-                                    <div class="form-group">
-                                        <label for="event-description">Modulo 2</label>
-                                        <textarea    [ngModelOptions]="{standalone: true}" [(ngModel)]="data.description2"class="form-control" ></textarea>
+                                <div class="row">    
+                                    <div class="col-lg-6">
+                                        <div class="">
+                                            
+                                        <div class="form-group">
+                                            <label for="event-description">Titulo del Modulo 2</label>
+                                            <textarea    [ngModelOptions]="{standalone: true}" placeholder="titulo del modulo" type="text" [(ngModel)]="data.title2"class="form-control" ></textarea>
+                                        </div>
+                                        </div>
                                     </div>
+                                    
+                                    <div class="col-lg-6">
+                                        <div class="">
+                                            
+                                        <div class="form-group">
+                                            <label for="event-description">Descripción Modulo 2</label>
+                                            <textarea    [ngModelOptions]="{standalone: true}" placeholder="Resumen" type="text" [(ngModel)]="data.description2"class="form-control" ></textarea>
+                                        </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- <form>

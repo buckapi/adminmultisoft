@@ -17,15 +17,25 @@
 
                         <form>
                             <div class="row">
-                                <div class="col-md-8">
-                                <div class="">
+                                <div class="col-md-4">
                                     <div class="">
-                                    <div class="form-group">
-                                        <label for="event-name">Nombre de cliente</label>
-                                        <input  class="form-control" placeholder="nombre"type="text" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}">
-                                    </div>
+                                        <div class="">
+                                        <div class="form-group">
+                                            <label for="event-name">Nombre de cliente</label>
+                                            <input  class="form-control" placeholder="nombre"type="text" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="col-md-8">
+                                    <div class="">
+                                        <div class="">
+                                        <div class="form-group">
+                                            <label for="event-name">Opinión de cliente</label>
+                                            <input  class="form-control" placeholder="Testimonio"type="text" [(ngModel)]="data.detail" name="name" required  [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="popup-box-actions medium void">

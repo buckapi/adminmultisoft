@@ -50,7 +50,9 @@ export class AddComponent implements AfterViewInit {
     dimensiones: '',
     calibre: '',
     description1: '',
-    description2: ''
+    title1: '',
+    description2: '',
+    title2: ''
   };
 
   
