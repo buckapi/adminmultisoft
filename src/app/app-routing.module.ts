@@ -8,11 +8,11 @@ const routes: Routes = [
   { path: 'login', loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule) },
   
   
-  { path: 'c2oDetail', loadChildren: () => import('./components/click2order/detail/detail.module').then(m => m.DetailModule) },
+  { path: 'solutionDetail', loadChildren: () => import('./components/click2order/detail/detail.module').then(m => m.DetailModule) },
   
-  { path: 'c2oAll', loadChildren: () => import('./components/click2order/all/all.module').then(m => m.AllModule) },
+  { path: 'solutionAll', loadChildren: () => import('./components/click2order/all/all.module').then(m => m.AllModule) },
   
-  { path: 'c2oAdd', loadChildren: () => import('./components/click2order/add/add.module').then(m => m.AddModule) },
+  { path: 'solutionAdd', loadChildren: () => import('./components/click2order/add/add.module').then(m => m.AddModule) },
 
   { path: 'cateadd', loadChildren: () => import('./components/category/addcategory/addcategory.module').then(m => m.AddcategoryModule) },
 

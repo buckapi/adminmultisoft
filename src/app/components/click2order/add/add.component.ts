@@ -22,21 +22,21 @@ export class AddComponent implements AfterViewInit {
   
  
   products$:any={};
-  public captions: UploaderCaptions = {
-    dropzone: {
-      title: 'Imágenes del producto',
-      or: '.',
-      browse: 'Cargar',
-    },
-    cropper: {
-      crop: 'Cortar',
-      cancel: 'Cancelar',
-    },
-    previewCard: {
-      remove: 'Borrar',
-      uploadError: 'error',
-    },
-  };
+  // public captions: UploaderCaptions = {
+  //   dropzone: {
+  //     title: 'Imágenes del producto',
+  //     or: '.',
+  //     browse: 'Cargar',
+  //   },
+  //   cropper: {
+  //     crop: 'Cortar',
+  //     cancel: 'Cancelar',
+  //   },
+  //   previewCard: {
+  //     remove: 'Borrar',
+  //     uploadError: 'error',
+  //   },
+  // };
 
   data = {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
@@ -48,7 +48,9 @@ export class AddComponent implements AfterViewInit {
     referencia: '',
     idCategory: '',
     dimensiones: '',
-    calibre: ''
+    calibre: '',
+    description1: '',
+    description2: ''
   };
 
   
@@ -73,7 +75,7 @@ this.getAllCategories();
           console.log(response);
           // this.getAll();
           this._butler.uploaderImages=[];
-          this.router.navigate(['proall']);
+          this.router.navigate(['solutionAll']);
           Swal.fire({
             position: 'center',
             icon: 'success',

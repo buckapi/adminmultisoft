@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a routerLink="../proall">Productos</a></li>
+                <li class="breadcrumb-item"><a routerLink="../solutionAll">Productos</a></li>
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Agregar producto</a></li>
             </ol>
         </div>
@@ -17,7 +17,7 @@
 
                         <form>
                             <div class="row">
-                                <div class="col-md-4">
+                                <!-- <div class="col-md-4">
                                 <div class="">
                                     <div class="">
                                     <ngx-awesome-uploader
@@ -26,16 +26,16 @@
                                     </ngx-awesome-uploader>
                                     </div>
                                 </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="">
+                                </div> -->
+                                <div class="col-md-12">
+                                    <!-- <div class="">
                                         <div class="">
                                             <div class="form-group">
                                             <label for="event-name">Ref:</label>
                                             <input  class="form-control" placeholder="Referencia"type="number" [(ngModel)]="data.referencia" name="name" required  [ngModelOptions]="{standalone: true}">
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="">
                                     <div class="">
                                     <div class="form-group">
@@ -48,7 +48,7 @@
                                 <div class="">
                                     <div class="">
                                     <div class="form-group">
-                                        <label for="event-description">Categoría</label>
+                                        <label for="event-description">Industria</label>
                                         <!-- <select class="form-control form-control-lg default-select ">
                                         <option (click)="onCategorySelect(category)" *ngFor="let category of yeoman.allcategory" [value]="category.idCategory">{{ category.name }}</option>
                                         </select> -->
@@ -61,13 +61,30 @@
                                     </div>
                                     </div>
                                 </div>
-                                
                                 <div class="">
                                     <div class="">
                                         
                                     <div class="form-group">
                                         <label for="event-description">Descripción</label>
                                         <textarea    [ngModelOptions]="{standalone: true}" [(ngModel)]="data.description"class="form-control" ></textarea>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                        
+                                    <div class="form-group">
+                                        <label for="event-description">Modulo 1</label>
+                                        <textarea    [ngModelOptions]="{standalone: true}" [(ngModel)]="data.description1"class="form-control" ></textarea>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                        
+                                    <div class="form-group">
+                                        <label for="event-description">Modulo 2</label>
+                                        <textarea    [ngModelOptions]="{standalone: true}" [(ngModel)]="data.description2"class="form-control" ></textarea>
                                     </div>
                                     </div>
                                 </div>

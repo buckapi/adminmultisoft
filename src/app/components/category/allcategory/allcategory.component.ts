@@ -29,7 +29,7 @@ getAll(){
 
 setPreview(i:any){
   this.yeoman.preview=this.yeoman.allcategory[i];
-  this.router.navigate(['rudetail']);
+  this.router.navigate(['catedetail']);
 }
   ngOnInit(): void {
   }

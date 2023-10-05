@@ -12,6 +12,7 @@ export class Yeoman {
   existencias:any=[];
   existenciasSize:number=0;
   allCategoriesSize:number=0;
+  allClientsSize:number=0;
     virtualRoute:any="dashboard";
     pop:Boolean=false;
     data:any={};

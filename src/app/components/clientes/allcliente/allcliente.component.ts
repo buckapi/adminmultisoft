@@ -10,6 +10,7 @@ import{NgxUiLoaderService} from 'ngx-ui-loader';
 })
 export class AllclienteComponent implements OnInit {
 category:any;
+clients:any;
 
   constructor(
     private ngxService: NgxUiLoaderService,

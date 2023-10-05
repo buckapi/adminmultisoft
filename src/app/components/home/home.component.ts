@@ -31,12 +31,17 @@ export class HomeComponent implements OnInit {
     this.dataApiService.getAllProducts().subscribe(response=>{
       this.yeoman.all=response;
       this.allSize=this.yeoman.all.length;
-
+      console.log(this.allSize);
+      
     });
     this.dataApiService.getAllCategory().subscribe(response=>{
       this.yeoman.allcategory=response;
       this.yeoman.allCategoriesSize=this.yeoman.allcategory.length;
 
+    });
+    this.dataApiService.getAllClient().subscribe(response=>{
+      this.yeoman.allclient=response;
+      this.yeoman.allClientsSize=this.yeoman.allclient.length;
     });
     
     if(!this.authRESTService.getCurrentUser() ){this.router.navigate(['/login'])}

@@ -23,12 +23,13 @@ getAll(){
   this.dataApiService.getAllProducts().subscribe(response=>{
     this.yeoman.all=response;
     this.ngxService.stop("loader-01");
+    
   });
 }
 
 setPreview(i:any){
   this.yeoman.preview=this.yeoman.all[i];
-  this.router.navigate(['c2oDetail']);
+  this.router.navigate(['solutionDetail']);
 }
   ngOnInit(): void {
   }

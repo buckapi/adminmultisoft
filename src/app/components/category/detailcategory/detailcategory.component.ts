@@ -24,7 +24,7 @@ delete(){
       this.yeoman.allcategory=response;
     });
   });
-  this.router.navigate(['/ruall']);
+  this.router.navigate(['/cateall']);
 }
 cancelDelete(){}
   ngOnInit(): void {
