@@ -53,11 +53,11 @@
                                         <option (click)="onCategorySelect(category)" *ngFor="let category of yeoman.allcategory" [value]="category.idCategory">{{ category.name }}</option>
                                         </select> -->
                                         
-                                        <select id="category" class="form-control wide my-custom-select" [(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
+                                        <!-- <select id="category" class="form-control wide my-custom-select" [(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
                                             <option *ngFor="let category of yeoman.allcategory, let i = index " [ngValue]="i"> 
                                                 <span   style="cursor:pointer;">{{category.name}}</span>
                                             </option>
-                                        </select>
+                                        </select> -->
                                     </div>
                                     </div>
                                 </div>
@@ -71,17 +71,17 @@
                                     </div>
                                 </div>
                                 <div class="row">    
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-8">
                                         <div class="">
                                             
                                         <div class="form-group">
-                                            <label for="event-description">Titulo del Modulo 1</label>
-                                            <textarea    [ngModelOptions]="{standalone: true}" placeholder="titulo del modulo" type="text" [(ngModel)]="data.title1"class="form-control" ></textarea>
+                                            <label for="event-description">Listado de modulos</label>
+                                            <textarea    [ngModelOptions]="{standalone: true}" placeholder="modulos" type="text" [(ngModel)]="data.moduless"class="form-control" ></textarea>
                                         </div>
                                         </div>
                                     </div>
                                     
-                                    <div class="col-lg-6">
+                                    <!-- <div class="col-lg-6">
                                         <div class="">
                                             
                                         <div class="form-group">
@@ -89,9 +89,9 @@
                                             <textarea    [ngModelOptions]="{standalone: true}" placeholder="Resumen" type="text" [(ngModel)]="data.description1"class="form-control" ></textarea>
                                         </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
-                                <div class="row">    
+                                <!-- <div class="row">    
                                     <div class="col-lg-6">
                                         <div class="">
                                             
@@ -111,7 +111,7 @@
                                         </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- <form>
                                     <label for="diametroPulgadas">Diametro en Pulgadas:</label>
                                     <select id="diametroPulgadas" name="diametroPulgadas" [(ngModel)]="selectedDiametro">

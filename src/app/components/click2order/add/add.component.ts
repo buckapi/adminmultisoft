@@ -52,7 +52,8 @@ export class AddComponent implements AfterViewInit {
     description1: '',
     title1: '',
     description2: '',
-    title2: ''
+    title2: '',
+    moduless: ''
   };
 
   

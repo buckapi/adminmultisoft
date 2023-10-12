@@ -39,3 +39,8 @@
     color: #555;
     margin-top: 10px;
 }
+.fixed-size-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
