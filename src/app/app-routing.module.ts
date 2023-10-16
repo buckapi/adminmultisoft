@@ -7,12 +7,17 @@ const routes: Routes = [
   
   { path: 'login', loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule) },
   
-  
   { path: 'solutionDetail', loadChildren: () => import('./components/click2order/detail/detail.module').then(m => m.DetailModule) },
   
   { path: 'solutionAll', loadChildren: () => import('./components/click2order/all/all.module').then(m => m.AllModule) },
   
   { path: 'solutionAdd', loadChildren: () => import('./components/click2order/add/add.module').then(m => m.AddModule) },
+
+  { path: 'rubroDetail', loadChildren: () => import('./components/rubros/detail/detail.module').then(m => m.DetailModule) },
+  
+  { path: 'rubroAll', loadChildren: () => import('./components/rubros/all/all.module').then(m => m.AllModule) },
+  
+  { path: 'rubroAdd', loadChildren: () => import('./components/rubros/add/add.module').then(m => m.AddModule) },
 
   { path: 'cateadd', loadChildren: () => import('./components/category/addcategory/addcategory.module').then(m => m.AddcategoryModule) },
 
