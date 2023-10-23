@@ -40,10 +40,7 @@ export class AddcategoryComponent implements AfterViewInit {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
     name: '',
     description: '',
-    price: null,
-    stock: 0,
     ref: '',
-    idBranch: ''
   };
   // branchOptions = [
   //   {

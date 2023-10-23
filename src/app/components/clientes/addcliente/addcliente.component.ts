@@ -105,7 +105,7 @@ export class AddclienteComponent implements AfterViewInit {
         }
        
         onCategorySelect(category:any) {        
-          this.data.idCategory = category.idCategory;
+          this.data.idCategory = "c"+category.id;
           console.log(category.id);
         }
         
