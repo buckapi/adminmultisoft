@@ -26,6 +26,8 @@ export class Yeoman {
     alltestimony:any=[];
     rubro:any=[];
     allrubro:any=[];
+    integration:any={};
+    allintegration:any=[];
     currency:number=1;
     config: {
       clientSelected:number;

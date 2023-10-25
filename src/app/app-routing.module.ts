@@ -37,6 +37,15 @@ const routes: Routes = [
 
   { path: 'testdetail', loadChildren: () => import('./components/testimonios/detailtest/detailtest.module').then(m => m.DetailtestModule) },
 
+  { path: 'integrationsAll', loadChildren: () => import('./components/integrations/all/all.module').then(m => m.AllModule) },
+  
+  { path: 'integrationsAdd', loadChildren: () => import('./components/integrations/add/add.module').then(m => m.AddModule) },
+
+  { path: 'integrationsDetail', loadChildren: () => import('./components/integrations/detail/detail.module').then(m => m.DetailModule) },
+
+ 
+  
+  
 ];
 
 @NgModule({
