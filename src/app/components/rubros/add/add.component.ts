@@ -43,17 +43,8 @@ export class AddComponent implements AfterViewInit {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
     name: '',
     description: '',
-    price: null,
-    stock: 0,
     ref: '',
-    referencia: '',
     idCategory: '',
-    dimensiones: '',
-    calibre: '',
-    description1: '',
-    title1: '',
-    description2: '',
-    title2: '',
     moduless: ''
   };
 
