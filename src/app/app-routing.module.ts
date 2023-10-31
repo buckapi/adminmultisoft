@@ -13,12 +13,7 @@ const routes: Routes = [
   
   { path: 'solutionAdd', loadChildren: () => import('./components/click2order/add/add.module').then(m => m.AddModule) },
 
-  { path: 'rubroDetail', loadChildren: () => import('./components/rubros/detail/detail.module').then(m => m.DetailModule) },
   
-  { path: 'rubroAll', loadChildren: () => import('./components/rubros/all/all.module').then(m => m.AllModule) },
-  
-  { path: 'rubroAdd', loadChildren: () => import('./components/rubros/add/add.module').then(m => m.AddModule) },
-
   { path: 'cateadd', loadChildren: () => import('./components/category/addcategory/addcategory.module').then(m => m.AddcategoryModule) },
 
   { path: 'cateall', loadChildren: () => import('./components/category/allcategory/allcategory.module').then(m => m.AllcategoryModule) },
