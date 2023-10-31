@@ -41,29 +41,9 @@ export class AddcategoryComponent implements AfterViewInit {
     name: '',
     description: '',
     ref: '',
+    modules:''
   };
-  // branchOptions = [
-  //   {
-  //     name: 'Accesorios',
-  //     images: ['assets/assetsdash/images/profile/profile.png'],
-  //     idBranch: 'ca000001'
-  //   },
-  //   {
-  //     name: 'Herramientas',
-  //     images: ['assets/assetsdash/images/profile/profile.png'],
-  //     idBranch: 'ca000002'
-  //   },
-  //   {
-  //     name: 'Hogar',
-  //     images: ['assets/assetsdash/images/profile/profile.png'],
-  //     idBranch: 'ca000003'
-  //   },
-  //   {
-  //     name: 'Tecnología',
-  //     images: ['assets/assetsdash/images/profile/profile.png'],
-  //     idBranch: 'ca000004'
-  //   }
-  // ];
+ 
   adapter = new  DemoFilePickerAdapter(this.http,this._butler);
   constructor(
     public router:Router,
