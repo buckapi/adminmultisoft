@@ -20,33 +20,18 @@ export class AddComponent implements AfterViewInit {
   categorySeted: boolean = false;
   products$: any = {};
   modules: any;
-  config2 = {
-    displayFn:(item: any) => { return item.name; }, //a replacement ofr displayKey to support flexible text displaying for each item
-    displayKey:"name", //if objects array passed which key to be displayed defaults to description
-    search:true ,//true/false for the search functionlity defaults to false,
-    height: 'auto', //height of the list so that if there are more no of items it can show a scroll defaults to auto. With auto height scroll will never appear
-    placeholder:'Sleccione', // text to be displayed when no item is selected defaults to Select,
-    // customComparator: ()=>{}, // a custom function using which user wants to sort the items. default is undefined and Array.sort() will be used in that case,
-    limitTo: 0, // number thats limits the no of options displayed in the UI (if zero, options will not be limited)
-    moreText: 'more', // text to be displayed whenmore than one items are selected like Option 1 + 5 more
-    noResultsFound: 'No results found!', // text to be displayed when no items are found while searching
-    searchPlaceholder:'Search', // label thats displayed in search input,
-    searchOnKey: 'name', // key on which search should be performed this will be selective search. if undefined this will be extensive search on all keys
-    }
 
 
-    config = {
-      
+    config = {      
       displayFn:(item: any) => { return item.name; }, //a replacement ofr displayKey to support flexible text displaying for each item
-      displayKey: 'categoria', // La clave a mostrar en el componente
+      displayKey: 'Categoria', // La clave a mostrar en el componente
       search: true, // Habilitar búsqueda
       height: '400px', // Altura del desplegable
       placeholder: 'Seleccione', // Texto predeterminado
       limitTo: 0, // Límite de opciones mostradas
-      
-      moreText: 'more', // Texto para mostrar cuando hay más elementos seleccionados
-      noResultsFound: 'No results found!', // Texto cuando no se encuentran resultados
-      searchPlaceholder: 'Search', // Placeholder del campo de búsqueda
+      moreText: 'más', // Texto para mostrar cuando hay más elementos seleccionados
+      noResultsFound: 'Sin resultados', // Texto cuando no se encuentran resultados
+      searchPlaceholder: 'Buscar', // Placeholder del campo de búsqueda
       searchOnKey: 'name', // La clave por la cual se realiza la búsqueda
       customComparator: (a: any, b: any) => 0, // Función de comparación personalizada
       clearOnSelection: true, // Borrar selección después de elegir una opción
