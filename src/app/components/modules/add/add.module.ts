@@ -7,12 +7,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { FilePickerModule } from  'ngx-awesome-uploader';
-
+import { SelectDropDownModule } from 'ngx-select-dropdown'
 @NgModule({
   declarations: [
     AddComponent
   ],
   imports: [
+    SelectDropDownModule,
     FilePickerModule,
     HttpClientModule,
      CommonModule,

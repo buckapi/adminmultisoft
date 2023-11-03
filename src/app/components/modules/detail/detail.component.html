@@ -61,9 +61,14 @@
                                      
                                         <p class="text-content">Descripción: <span class="item">{{yeoman.preview.description}}</span></p>
                                         
-                                        <div class="module-card">
+                                        <div >
                                             <div>
-                                                <p class="text-content">Modulos: <span class="item">{{yeoman.preview.moduless}}</span></p></div>
+                                                <p >Rubro:
+                                                     <span class="badge badge-outline-info"  *ngFor="let category of yeoman.preview.categories;let i =index;">
+                                                         {{category.name}} 
+                                                    </span> 
+                                                </p>
+                                            </div>
                                         </div>
                                       
                                     </div>

@@ -16,7 +16,7 @@ export class DetailComponent implements OnInit {
     public dataApiService:DataApiService
     ) { 
       //  if(this.yeoman.preview.images[0]===undefined){this.router.navigate([''])}
-      
+      console.log(JSON.stringify(this.yeoman.preview))
       this.findCategory();
       }
 delete(){ 
