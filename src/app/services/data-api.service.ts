@@ -60,13 +60,7 @@ export class DataApiService {
 		  "Content-Type":"application/json"	
 	});
 
-	deletePart(id: string){
-		const token = this.AuthRESTService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/products/${id}/?access_token$={token}`;
-		return this.http
-		.delete<PartInterface>(url_api, {headers: this.headers})
-		.pipe(map(data => data));
-	}
+	
 	deleteProduct(id: string){
 		const token = this.AuthRESTService.getToken();
 		const url_api=	this.yeoman.origin.restUrl+`/api/products/${id}/?access_token$={token}`;
@@ -109,38 +103,18 @@ export class DataApiService {
 		.delete<ClientInterface>(url_api, {headers: this.headers})
 		.pipe(map(data => data));
 	}
-	deleteCar(id: string){
+	deleteModules(id: string){
 		const token = this.AuthRESTService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/cars/${id}/?access_token$={token}`;
+		const url_api=	this.yeoman.origin.restUrl+`/api/modules/${id}/?access_token$={token}`;
 		return this.http
-		.delete<CarInterface>(url_api, {headers: this.headers})
+		.delete<ClientInterface>(url_api, {headers: this.headers})
 		.pipe(map(data => data));
 	}
-	deleteChat(id: string){
-		const token = this.AuthRESTService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/chats/${id}/?access_token$={token}`;
-		return this.http
-		.delete<ChatInterface>(url_api, {headers: this.headers})
-		.pipe(map(data => data));
-	}
-	deleteMessage(idChat: string){
-		const token = this.AuthRESTService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/messages?filter[where][idChat]=${idChat}/?access_token$={token}`;
-		return this.http
-		.delete<MessageInterface>(url_api, {headers: this.headers})
-		.pipe(map(data => data));
-	}
-	deleteMember(id: string){
-		const token = this.AuthRESTService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/cards/${id}/?access_token$={token}`;
-		return this.http
-		.delete<MemberInterface>(url_api, {headers: this.headers})
-		.pipe(map(data => data));
-	}
-	getTransationByBranch(branch: string){
-		const url_api = 	this.yeoman.origin.restUrl+`/api/transactions?filter[where][idBranch]=${branch}`;
-		this.transactions = this.http.get(url_api);
-		return ( this.http.get(url_api));		
+	
+
+	getProduct(id: string){
+		const url_api = 	this.yeoman.origin.restUrl+`/api/products/${id}`;
+		return this.http.get(url_api);
 	}
 	getAllProducts(){
 		const url_api = 	this.yeoman.origin.restUrl+'/api/products';
@@ -166,44 +140,13 @@ export class DataApiService {
 		const url_api = 	this.yeoman.origin.restUrl+'/api/rubros';
 		return this.http.get(url_api);
 	}
-	getAllCars(){
-		const url_api = 	this.yeoman.origin.restUrl+'/api/cars';
+	getAllModules(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/modules';
 		return this.http.get(url_api);
-	}
-
-	getAllChats(){
-		const url_api = 	this.yeoman.origin.restUrl+'/api/chats';
-		return this.http.get(url_api);
-	}
-	getMessagesBy(idChat: string){
-		const url_api = 	this.yeoman.origin.restUrl+`/api/messages?filter[where][idChat]=${idChat}`;
-		this.messages = this.http.get(url_api);
-		return ( this.http.get(url_api));		
 	}
 	
-	getAllCards(){
-		const url_api = 	this.yeoman.origin.restUrl+'/api/cards';
-		return this.http.get(url_api);
-	}
 
-	getAllOrders(){
-		const url_api = 	this.yeoman.origin.restUrl+'/api/orders';
-		return this.http.get(url_api);
-	}
-	getAllTransactions(){
-		const url_api = 	this.yeoman.origin.restUrl+'/api/transactions';
-		return this.http.get(url_api);
-	}
-	getProduct(id: string){
-		const url_api = 	this.yeoman.origin.restUrl+`/api/products/${id}`;
-		return this.http.get(url_api);
-	}
-
-	getCierresByBranch(branch: string){
-		const url_api = 	this.yeoman.origin.restUrl+`/api/infos?filter[where][idBranch]=${branch}`;
-		this.cierre = this.http.get(url_api);
-		return ( this.http.get(url_api));		
-	}
+	
 
 
 	carUpdate(car :CarInterface, id: string){
@@ -248,69 +191,19 @@ export class DataApiService {
 		.put<ClientInterface>(url_api, part)
 		.pipe(map(data => data));
 	}
-	cardUpdate(card :CardInterface, id: string){
+	modulesUpdate(part :ClientInterface, id: string){
 		// let token = this.authService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/cards/${id}`;
+		const url_api=	this.yeoman.origin.restUrl+`/api/modules/${id}`;
 		return this.http
-		.put<CardInterface>(url_api, card)
+		.put<ClientInterface>(url_api, part)
 		.pipe(map(data => data));
 	}
-
-	memberUpdate(member :MemberInterface, id: string){
-		// let token = this.authService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/cards/${id}`;
-		return this.http
-		.put<MemberInterface>(url_api, member)
-		.pipe(map(data => data));
-	}
-	getPartsById(userId: string){
-		const url_api = 	this.yeoman.origin.restUrl+`/api/products?filter[where][userId]=${userId}`;
-		this.parts = this.http.get(url_api);
-		return ( this.http.get(url_api));		
-	}
-	getCarsById(userId: string){
-		const url_api = 	this.yeoman.origin.restUrl+`/api/cars?filter[where][userId]=${userId}`;
-		this.cars = this.http.get(url_api);
-		return ( this.http.get(url_api));		
-	}
-	getCardByUserId(userId: string){
-		const url_api = 	this.yeoman.origin.restUrl+`/api/cards?filter[where][userd]=${userId}`;
-		this.cards = this.http.get(url_api);
-		return ( this.http.get(url_api));		
-	}
-	getSerialT(branch: string){
-		const url_api = 	this.yeoman.origin.restUrl+`/api/branchs/${branch}`;
-		this.branch = this.http.get(url_api);
-		this.butler.serialT=this.branch.serialT;
-		return ( this.branch);		
-	}
-	// setSerialT(branch: string){
-	// 	const url_api = 	this.yeoman.origin.restUrl+`/api/branchs/${branch}`;
-	// 	this.branch = this.http.get(url_api);
-	// 	this.butler.serialT=this.branch.serialT;
-	// 	return ( this.branch);		
-	// }
-	setSerialT(serial:SerialInterface, branch: string){
-		// let token = this.authService.getToken();
-		const url_api = 	this.yeoman.origin.restUrl+`/api/branchs/${branch}`;
-		return this.http
-		.put<SerialInterface>(url_api, serial)
-		.pipe(map(data => data));
-	}
+	
+	
+	
 
 
-	saveCard(card :CardInterface){
-		const url_api=	this.yeoman.origin.restUrl+'/api/cards';
-		return this.http
-		.post<CardInterface>(url_api, card)
-		.pipe(map(data => data));
-	}
-	saveMessage(message:MessageInterface){
-		const url_api=	this.yeoman.origin.restUrl+'/api/messages';
-		return this.http
-		.post<MessageInterface>(url_api, message)
-		.pipe(map(data => data));
-	}
+	
 	saveProduct(product :ProductInterface){
 		const url_api=	this.yeoman.origin.restUrl+'/api/products';
 		return this.http
@@ -347,23 +240,13 @@ export class DataApiService {
 		.post<ClientInterface>(url_api, client)
 		.pipe(map(data => data));
 	}
-	saveCar(car :CarInterface){
-		const url_api=	this.yeoman.origin.restUrl+'/api/cars';
+	saveModules(client :ClientInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/modules';
 		return this.http
-		.post<CarInterface>(url_api, car)
+		.post<ClientInterface>(url_api, client)
 		.pipe(map(data => data));
 	}
-	savePart(part :PartInterface){
-		const url_api=	this.yeoman.origin.restUrl+'/api/products';
-		return this.http
-		.post<PartInterface>(url_api, part)
-		.pipe(map(data => data));
-	}
-	saveTicket(ticket :TicketInterface){
-		const url_api=	this.yeoman.origin.restUrl+'/api/transactions';
-		return this.http
-		.post<TicketInterface>(url_api, ticket)
-		.pipe(map(data => data));
-	}
+	
+	
 	
 }

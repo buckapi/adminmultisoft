@@ -28,6 +28,8 @@ export class Yeoman {
     allrubro:any=[];
     integration:any={};
     allintegration:any=[];
+    modules:any={};
+    allModules:any=[];
     currency:number=1;
     config: {
       clientSelected:number;

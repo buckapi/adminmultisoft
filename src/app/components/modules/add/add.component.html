@@ -1,0 +1,59 @@
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="../modulesAll">Modulos</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Agregar modulo</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <div class="col-xl-12 col-xxl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title"></h4>
+                    </div>
+                    <div class="card-body">
+
+                        <form>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="">
+                                        <div class="">
+                                        <ngx-awesome-uploader
+                                        [adapter]="adapter"
+                                        [captions]="captions">
+                                        </ngx-awesome-uploader>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="">
+                                        <div class="form-group">
+                                        <label for="event-name">Nombre del modulo</label>
+                                        <input  class="form-control" placeholder="nombre" type="text" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="form-group">
+                                            <label for="event-description">Descripción</label>
+                                            <textarea    [ngModelOptions]="{standalone: true}" placeholder="Resumen" type="text" [(ngModel)]="data.description"class="form-control" ></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popup-box-actions medium void" style="padding-top: 5px;">
+                              <button class="btn btn-primary" id="closeButton"  (click)="onSubmit()">Guardar modulo!</button>
+                            </div>
+                        </form>
+
+
+
+
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

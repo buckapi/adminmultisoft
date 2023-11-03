@@ -37,6 +37,14 @@ const routes: Routes = [
   { path: 'integrationsAdd', loadChildren: () => import('./components/integrations/add/add.module').then(m => m.AddModule) },
 
   { path: 'integrationsDetail', loadChildren: () => import('./components/integrations/detail/detail.module').then(m => m.DetailModule) },
+  
+   { path: 'modulesAll', loadChildren: () => import('./components/modules/all/all.module').then(m => m.AllModule) },
+  
+  { path: 'modulesAdd', loadChildren: () => import('./components/modules/add/add.module').then(m => m.AddModule) },
+
+  { path: 'modulesDetail', loadChildren: () => import('./components/modules/detail/detail.module').then(m => m.DetailModule) },
+  
+  
 
  
   
