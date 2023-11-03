@@ -22,20 +22,19 @@
                 
                 
                 <div class="row">
-                    <!-- <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" *ngFor="let product of yeoman.all;let i = index"  (click)="setPreview(i)" style="cursor: pointer;" [hidden]="product.images[0]===undefined" > -->
 
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" *ngFor="let product of yeoman.all;let i = index"  (click)="setPreview(i)" style="cursor: pointer;">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" *ngFor="let modules of yeoman.allModules;let i = index"  (click)="setPreview(i)" style="cursor: pointer;">
                         <div class="card" >
                             <div class="card-body">
                                 <div class="new-arrival-product">
-                                    <!-- <div class="new-arrivals-img-contnent">
-                                        <img class="img-fluid" src="assets/gymove/images/product/1.jpg" alt="" *ngIf="product.images[0]===undefined">
-                                        <img class="img-fluid" src="{{product.images[0]}}" alt="" *ngIf="product.images[0]!==undefined">
+                                    <div class="new-arrivals-img-contnent">
+                                        <img class="img-fluid" src="assets/gymove/images/product/1.jpg" alt="" *ngIf="modules.images[0]===undefined">
+                                        <img class="img-fluid" src="{{modules.images[0]}}" alt="" *ngIf="modules.images[0]!==undefined">
                                   
-                                    </div> -->
+                                    </div>
                                     
                                     <div class="new-arrival-content text-center mt-3">
-                                        <h4><a >Producto: {{product.name}}</a></h4>
+                                        <h4><a >Producto: {{modules.name}}</a></h4>
                                        
                                         
                                     </div>
