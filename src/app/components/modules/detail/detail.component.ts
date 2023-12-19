@@ -19,6 +19,10 @@ export class DetailComponent implements OnInit {
       console.log(JSON.stringify(this.yeoman.preview))
       this.findCategory();
       }
+      editModulo(){
+        this.router.navigate(['modulesEdit']);
+      
+      }
 delete(){ 
   this.dataApiService.deleteModules(this.yeoman.preview.id).subscribe(response=>{
     this.dataApiService.getAllModules().subscribe(response=>{

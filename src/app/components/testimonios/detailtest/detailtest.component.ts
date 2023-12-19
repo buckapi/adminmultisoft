@@ -18,6 +18,9 @@ export class DetailtestComponent implements OnInit {
     { 
       //  if(this.yeoman.preview.images[0]===undefined){this.router.navigate([''])}
     }
+    editTest(){
+      this.router.navigate(['testEdit']);
+    }
 delete(){ 
   this.dataApiService.deleteTestimony(this.yeoman.preview.id).subscribe(response=>{
     this.dataApiService.getAllTestimony().subscribe(response=>{

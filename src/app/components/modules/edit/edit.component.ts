@@ -18,8 +18,7 @@ export class EditComponent implements AfterViewInit {
   @ViewChild('deleteSwal')
   category = 'Seleccione una';
   categorySeted: boolean = false;
-  products$: any = {};
-  modules: any;
+  modules: any = {};
 
 
     config = {      
@@ -72,15 +71,21 @@ export class EditComponent implements AfterViewInit {
   ) {
     this.getAllCategories();
     this._butler.data = this.data;
+    this.data=this.yeoman.preview;
+    console.log("previewclient: " + JSON.stringify(this.yeoman.preview));
+
   }
   public addCategorieToModule(category:any){
     console.log(category);
     this.data.categories=category.value;
   }
+  cancelarUpdate(){
+    this.router.navigate(['/modulesAll']);
+  }
   onSubmit() {
-    this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
-    this.data.images = this._butler.uploaderImages;
-    this.dataApiService.saveModules(this.data).subscribe(response => {
+    /* this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
+    this.data.images = this._butler.uploaderImages; */
+    this.dataApiService.modulesUpdate(this.data,this.yeoman.preview.id).subscribe(response => {
       console.log(response);
       this._butler.uploaderImages = [];
       this.router.navigate(['modulesAll']);
@@ -98,13 +103,13 @@ export class EditComponent implements AfterViewInit {
     this.dataApiService.getAllCategory().subscribe(response => {
       this.yeoman.categories = response;
       this.yeoman.allcategory = response;
-      console.log(this.yeoman.categories)
       this.yeoman.allCategoriesSize = this.yeoman.categories.length;
     });
   }
 
+  
   onCategorySelect(category: any) {
-    this.data.idCategory = category.idCategory;
+    this.data.idCategory = "c" + category.id;
     console.log(category.id);
   }
 

@@ -56,6 +56,9 @@ export class EditcategoryComponent implements AfterViewInit {
       this._butler.data=this.data;
       this.data=this.yeoman.preview;
     }
+    cancelarUpdate(){
+      this.router.navigate(['/cateall']);
+    }
       onSubmit() {
         /* this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
         this.data.images=this._butler.uploaderImages; */
@@ -67,7 +70,7 @@ export class EditcategoryComponent implements AfterViewInit {
           Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'Guardado',
+            title: 'Rubro Actualizado',
             showConfirmButton: false,
             timer: 1500
           })

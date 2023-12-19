@@ -58,11 +58,12 @@ export class AddComponent implements AfterViewInit {
     public dataApiService:DataApiService,
     public yeoman:Yeoman
     ) {
-
-     
-this.getAllCategories();
-
-      this._butler.data=this.data;}
+      this.getAllCategories();
+      this._butler.data=this.data;
+    }
+      cancelarUpdate(){
+        this.router.navigate(['/solutionAll']);
+      }
       onSubmit() {
         this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
         this.data.images=this._butler.uploaderImages;

@@ -52,6 +52,9 @@ export class AddcategoryComponent implements AfterViewInit {
     public dataApiService:DataApiService
     ) { 
       this._butler.data=this.data;}
+      cancelarUpdate(){
+        this.router.navigate(['/cateall']);
+      }
       onSubmit() {
         this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
         this.data.images=this._butler.uploaderImages;

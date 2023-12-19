@@ -37,7 +37,7 @@ const routes: Routes = [
 
   { path: 'testdetail', loadChildren: () => import('./components/testimonios/detailtest/detailtest.module').then(m => m.DetailtestModule) },
 
-  { path: 'testedit', loadChildren: () => import('./components/testimonios/edittest/edittest.module').then(m => m.EdittestModule) },
+  { path: 'testEdit', loadChildren: () => import('./components/testimonios/edittest/edittest.module').then(m => m.EdittestModule) },
 
   { path: 'integrationsAll', loadChildren: () => import('./components/integrations/all/all.module').then(m => m.AllModule) },
   
@@ -52,6 +52,8 @@ const routes: Routes = [
   { path: 'modulesAdd', loadChildren: () => import('./components/modules/add/add.module').then(m => m.AddModule) },
 
   { path: 'modulesDetail', loadChildren: () => import('./components/modules/detail/detail.module').then(m => m.DetailModule) },
+
+  { path: 'modulesEdit', loadChildren: () => import('./components/modules/edit/edit.module').then(m => m.EditModule) },
   
   
 

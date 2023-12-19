@@ -19,7 +19,10 @@ export class DetailclienteComponent implements OnInit {
         this.router.navigate([''])}
         this.findCategory();
       }
+editClient(){
+  this.router.navigate(['clientedit']);
 
+}
 delete(){ 
   this.dataApiService.deleteClient(this.yeoman.preview.id).subscribe(response=>{
     this.dataApiService.getAllClient().subscribe(response=>{

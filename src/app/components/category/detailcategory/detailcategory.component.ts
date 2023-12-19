@@ -18,9 +18,9 @@ export class DetailcategoryComponent implements OnInit {
     { 
       this.findCategory();
       }
-      editProduct(){
-        this.router.navigate(['cateEdit']);
-      }
+      editCategory(){
+    this.router.navigate(['cateEdit']);
+  }
 delete(){ 
   this.dataApiService.deleteCategory(this.yeoman.preview.id).subscribe(response=>{
     this.dataApiService.getAllCategory().subscribe(response=>{

@@ -8,13 +8,13 @@ import { Yeoman } from '@services/yeoman.service';
 import Swal from 'sweetalert2'
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-addtest',
-  templateUrl: './addtest.component.html',
-  styleUrls: ['./addtest.component.css']
+  selector: 'app-edittest',
+  templateUrl: './edittest.component.html',
+  styleUrls: ['./edittest.component.css']
 })
-export class AddtestComponent implements AfterViewInit {
+export class EdittestComponent implements AfterViewInit {
   @ViewChild('deleteSwal')
- 
+//holis from emacs
   
   testimony:any;
   public captions: UploaderCaptions = {
@@ -28,7 +28,8 @@ export class AddtestComponent implements AfterViewInit {
       cancel: 'Cancelar',
     },
     previewCard: {
-      remove: 'Borrar',
+      remove: 'Bor
+      OArar',
       uploadError: 'error',
     },
   };
@@ -53,9 +54,6 @@ export class AddtestComponent implements AfterViewInit {
     public yeoman:Yeoman
     ) { 
       this._butler.data=this.data;}
-      cancelarUpdate(){
-        this.router.navigate(['/testall']);
-      }
       onSubmit() {
         this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
         this.data.images=this._butler.uploaderImages;

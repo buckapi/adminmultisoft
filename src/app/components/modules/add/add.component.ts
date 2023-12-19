@@ -77,6 +77,9 @@ export class AddComponent implements AfterViewInit {
     console.log(category);
     this.data.categories=category.value;
   }
+  cancelarUpdate(){
+    this.router.navigate(['/modulesAll']);
+  }
   onSubmit() {
     this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
     this.data.images = this._butler.uploaderImages;

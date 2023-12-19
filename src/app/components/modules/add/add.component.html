@@ -44,7 +44,7 @@
                                     </div>
                                     <div class="">
                                         <div class="form-group">
-                                            <label for="event-description">Categoría </label>
+                                            <label for="event-description">Rubro </label>
                                             <!-- <ngx-multiselect 
                                             [(ngModel)]="data.categories" [options]="yeoman.categories"
                                                 ngDefaultControl>
@@ -61,17 +61,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="popup-box-actions medium void text-right" style="padding-top: 5px;">
-                                <button class="btn btn-primary" id="closeButton" (click)="onSubmit()">Guardar
-                                    modulo!</button>
+                            <div div class="popup-box-actions medium void" style="text-align: end;">
+                                <button class="btn btn-primary" id="closeButton"  (click)="onSubmit()" style="background-color: #558b2f;
+                                border-color: #558b2f; margin-right: 10px;">Guardar modulo!</button>
+                                <button class="btn btn-primary" id="closeButton"  (click)="cancelarUpdate()">Cancelar!</button>
                             </div>
                             
                         </form>
-
-
-
-
-
                     </div>
                 </div>
             </div>

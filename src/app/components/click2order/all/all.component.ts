@@ -12,7 +12,7 @@ export class AllComponent implements OnInit {
 
   constructor(
     private ngxService: NgxUiLoaderService,
-public router:Router,    
+    public router:Router,    
     public dataApiService:DataApiService,
      public yeoman:Yeoman
      ) { 

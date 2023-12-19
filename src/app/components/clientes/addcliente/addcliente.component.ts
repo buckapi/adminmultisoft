@@ -52,7 +52,9 @@ export class AddclienteComponent implements AfterViewInit {
       this.getAllCategories();
       this._butler.data=this.data;
     }
-      
+    cancelarUpdate(){
+      this.router.navigate(['/clientall']);
+    }
       onSubmit() {
         this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
         this.data.images=this._butler.uploaderImages;

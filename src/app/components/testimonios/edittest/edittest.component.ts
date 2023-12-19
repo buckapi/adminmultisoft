@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 })
 export class EdittestComponent implements AfterViewInit {
   @ViewChild('deleteSwal')
- 
+//holis from emacs
   
   testimony:any;
   public captions: UploaderCaptions = {
@@ -52,11 +52,17 @@ export class EdittestComponent implements AfterViewInit {
     public dataApiService:DataApiService,
     public yeoman:Yeoman
     ) { 
-      this._butler.data=this.data;}
+      
+      this._butler.data=this.data;
+      this.data=this.yeoman.preview;
+    }
+    cancelarUpdate(){
+      this.router.navigate(['/testall']);
+    }
       onSubmit() {
-        this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
-        this.data.images=this._butler.uploaderImages;
-        this.dataApiService.saveTestimony(this.data).subscribe(response=>{
+        /* this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
+        this.data.images=this._butler.uploaderImages; */
+        this.dataApiService.testimonyUpdate(this.data,this.yeoman.preview.id).subscribe(response=>{
           console.log(response);
           // this.getAll();
           this._butler.uploaderImages=[];
@@ -64,7 +70,7 @@ export class EdittestComponent implements AfterViewInit {
           Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'Testimonio guardado',
+            title: 'Testimonio actualizado',
             showConfirmButton: false,
             timer: 1500
           })
