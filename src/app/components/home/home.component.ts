@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
     public script:ScriptService,public yeoman:Yeoman,
     public dataApiService:DataApiService
   ) { 
+    this.getTestimonials();
     this.dataApiService.getAllProducts().subscribe(response=>{
       this.yeoman.all=response;
       this.allSize=this.yeoman.all.length;
@@ -76,6 +77,14 @@ export class HomeComponent implements OnInit {
       prevEl: '.swiper-button-prev'
     },
   };  
+
+  getTestimonials(){
+    // this.ngxService.start("loader-01");
+    this.dataApiService.getAllTestimony().subscribe(response=>{
+      this.yeoman.alltestimony=response;
+      // this.ngxService.stop("loader-01");
+    });
+  }
 
   ngOnInit(): void {
   }

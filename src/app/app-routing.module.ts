@@ -13,6 +13,7 @@ const routes: Routes = [
   
   { path: 'solutionAdd', loadChildren: () => import('./components/click2order/add/add.module').then(m => m.AddModule) },
 
+  { path: 'solutionEdit', loadChildren: () => import('./components/click2order/edit/edit.module').then(m => m.EditModule) },
   
   { path: 'cateadd', loadChildren: () => import('./components/category/addcategory/addcategory.module').then(m => m.AddcategoryModule) },
 

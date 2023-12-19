@@ -61,6 +61,14 @@ export class DataApiService {
 	});
 
 	
+	productUpdate(part :ProductInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/products/${id}`;
+		return this.http
+		.put<ProductInterface>(url_api, part)
+		.pipe(map(data => data));
+	}
+
 	deleteProduct(id: string){
 		const token = this.AuthRESTService.getToken();
 		const url_api=	this.yeoman.origin.restUrl+`/api/products/${id}/?access_token$={token}`;
@@ -145,10 +153,6 @@ export class DataApiService {
 		return this.http.get(url_api);
 	}
 	
-
-	
-
-
 	carUpdate(car :CarInterface, id: string){
 		// let token = this.authService.getToken();
 		const url_api=	this.yeoman.origin.restUrl+`/api/cars/${id}`;
@@ -199,10 +203,6 @@ export class DataApiService {
 		.pipe(map(data => data));
 	}
 	
-	
-	
-
-
 	
 	saveProduct(product :ProductInterface){
 		const url_api=	this.yeoman.origin.restUrl+'/api/products';

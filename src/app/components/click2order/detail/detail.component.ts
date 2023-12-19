@@ -15,9 +15,10 @@ export class DetailComponent implements OnInit {
     public router:Router,
     public dataApiService:DataApiService
     ) { 
-      //  if(this.yeoman.preview.images[0]===undefined){this.router.navigate([''])}
-      
       this.findCategory();
+      }
+      editProduct(){
+        this.router.navigate(['solutionEdit']);
       }
 delete(){ 
   this.dataApiService.deleteProduct(this.yeoman.preview.id).subscribe(response=>{
