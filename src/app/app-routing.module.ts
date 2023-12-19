@@ -21,7 +21,7 @@ const routes: Routes = [
 
   { path: 'catedetail', loadChildren: () => import('./components/category/detailcategory/detailcategory.module').then(m => m.DetailcategoryModule) },
   
-  { path: 'catedetail', loadChildren: () => import('./components/category/editcategory/editcategory.module').then(m => m.EditcategoryModule) },
+  { path: 'cateEdit', loadChildren: () => import('./components/category/editcategory/editcategory.module').then(m => m.EditcategoryModule) },
 
   { path: 'clientadd', loadChildren: () => import('./components/clientes/addcliente/addcliente.module').then(m => m.AddclienteModule) },
 

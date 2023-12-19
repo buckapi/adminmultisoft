@@ -17,3 +17,14 @@
 }
 
 /* Puedes agregar más estilos según tus necesidades */
+
+  
+  .btn-primary1{
+    color: #0a6ed5;
+    border-color: #1367c8;
+    margin-right: 5px;
+    padding: 0.438rem 1rem;
+    font-weight: 600;
+    border-radius: 1.25rem;
+    font-size: small;
+  }

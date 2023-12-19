@@ -19,7 +19,7 @@ export class EditcategoryComponent implements AfterViewInit {
   @ViewChild('deleteSwal')
  
 
-  category:any;
+  category:any={};
   // products$:any={};
   public captions: UploaderCaptions = {
     dropzone: {
@@ -39,9 +39,9 @@ export class EditcategoryComponent implements AfterViewInit {
   data = {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
     name: '',
-    description: '',
     ref: '',
-    modules:''
+    /* description: '',    
+    modules:'' */
   };
  
   adapter = new  DemoFilePickerAdapter(this.http,this._butler);
@@ -49,13 +49,17 @@ export class EditcategoryComponent implements AfterViewInit {
     public router:Router,
     public http:HttpClient,
     public _butler:Butler,
-    public dataApiService:DataApiService
+    public dataApiService:DataApiService,
+    public yeoman:Yeoman
     ) { 
-      this._butler.data=this.data;}
+      /* this._butler.data=this.data; */
+      this._butler.data=this.data;
+      this.data=this.yeoman.preview;
+    }
       onSubmit() {
-        this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
-        this.data.images=this._butler.uploaderImages;
-        this.dataApiService.saveCategory(this.data).subscribe(response=>{
+        /* this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
+        this.data.images=this._butler.uploaderImages; */
+        this.dataApiService.categoryUpdate (this.data,this.yeoman.preview.id).subscribe(response=>{
           console.log(response);
           // this.getAll();
           this._butler.uploaderImages=[];

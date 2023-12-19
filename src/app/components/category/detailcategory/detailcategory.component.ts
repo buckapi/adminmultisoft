@@ -9,15 +9,18 @@ import Swal from 'sweetalert2'
   styleUrls: ['./detailcategory.component.css']
 })
 export class DetailcategoryComponent implements OnInit {
-
+  category:string="";
   constructor
     (public yeoman:Yeoman,
     public router:Router,
     public dataApiService:DataApiService
     ) 
     { 
-      //  if(this.yeoman.preview.images[0]===undefined){this.router.navigate([''])}
-    }
+      this.findCategory();
+      }
+      editProduct(){
+        this.router.navigate(['cateEdit']);
+      }
 delete(){ 
   this.dataApiService.deleteCategory(this.yeoman.preview.id).subscribe(response=>{
     this.dataApiService.getAllCategory().subscribe(response=>{
@@ -25,6 +28,13 @@ delete(){
     });
   });
   this.router.navigate(['/cateall']);
+}
+findCategory(){
+  for (let i=0;i<this.yeoman.allcategory.length;i++){
+    if(this.yeoman.preview.idCategory===this.yeoman.allcategory[i].id){
+      this.category=this.yeoman.allcategory[i].name;
+    }
+  }
 }
 cancelDelete(){}
   ngOnInit(): void {

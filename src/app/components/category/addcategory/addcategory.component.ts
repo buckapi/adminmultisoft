@@ -39,9 +39,9 @@ export class AddcategoryComponent implements AfterViewInit {
   data = {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
     name: '',
-    description: '',
     ref: '',
-    modules:''
+   /*  description: '',
+    modules:'' */
   };
  
   adapter = new  DemoFilePickerAdapter(this.http,this._butler);

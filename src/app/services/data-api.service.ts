@@ -61,13 +61,7 @@ export class DataApiService {
 	});
 
 	
-	productUpdate(part :ProductInterface, id: string){
-		// let token = this.authService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/products/${id}`;
-		return this.http
-		.put<ProductInterface>(url_api, part)
-		.pipe(map(data => data));
-	}
+	
 
 	deleteProduct(id: string){
 		const token = this.AuthRESTService.getToken();
@@ -153,18 +147,19 @@ export class DataApiService {
 		return this.http.get(url_api);
 	}
 	
-	carUpdate(car :CarInterface, id: string){
+	categoryUpdate(car :CategoryInterface, id: string){
 		// let token = this.authService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/cars/${id}`;
+		const url_api=	this.yeoman.origin.restUrl+`/api/categories/${id}`;
 		return this.http
-		.put<CarInterface>(url_api, car)
+		.put<CategoryInterface>(url_api, car)
 		.pipe(map(data => data));
 	}
-	partUpdate(part :PartInterface, id: string){
+	
+	productUpdate(part :ProductInterface, id: string){
 		// let token = this.authService.getToken();
 		const url_api=	this.yeoman.origin.restUrl+`/api/products/${id}`;
 		return this.http
-		.put<PartInterface>(url_api, part)
+		.put<ProductInterface>(url_api, part)
 		.pipe(map(data => data));
 	}
 	clientUpdate(part :ClientInterface, id: string){
